@@ -1,0 +1,67 @@
+.main-contacto { 
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 1100px;
+
+    @media (min-width: 426px) and (max-width: 768px) {
+        flex-direction: column-reverse;
+        min-width: 426px    
+        }
+    @media (max-width: 425px){
+          flex-direction: column-reverse;
+          max-width: 426px;
+          width: 100%;
+      }
+
+}
+
+
+.contacto-header {
+    h1 {
+    text-align: center;
+    font-weight: bolder;
+    width: 100%;
+    padding: 1em;
+}
+    h2 { 
+        text-align: left;
+        margin: 1em 1em;
+    }
+
+    p {
+        text-align: left;
+        margin: .5em 3em;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin: .5em 3em        
+    }
+    .contacto-formularios__message-text { 
+        height: 200px;
+        width: 600px;
+
+        @media (min-width: 426px) and (max-width: 768px) {
+            width: 100%;
+            }
+
+        @media (max-width: 425px){
+              max-width: 100%;
+            }    
+    }
+
+    .contacto-formularios__message-submit {
+        margin: 1em 0;
+        max-width: 600px;
+    }
+
+    .contacto-formularios__final { 
+        padding: 0 0 50px 0;
+    }
+
+
+}

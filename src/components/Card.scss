@@ -1,0 +1,208 @@
+.section-cards {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
+.cards-container {  
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1em auto;
+  
+}
+
+.card {
+  outline: none; /* Como el borde pero no ocupa espacio en la caja */
+  max-width: 80%;
+  height: 400px;
+  overflow: hidden; /* Si el contenido ocupa más espacio que el tamaño del contenedor. Queda oculto */
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: orange;
+  box-shadow: 0 1px 5px rgba(0,0,0, .2), 0 0 3px rgba(0,0,0, .3);
+  text-decoration: none;
+  color: #252525;
+
+  transition: all .2s;
+  @media (min-width: 426px) and (max-width: 768px){
+
+
+  }
+  @media (max-width: 425px) {
+    max-width: 300px;
+    height: 200px;
+    min-width: 300px;
+    font-size: 0.8em;
+
+  }
+
+
+  &:hover,
+  &:focus {
+    transform: scale(1.03) skewX(0);
+    transform-origin: bottom;
+    box-shadow: 0 7px 8px rgba(0,0,0, .05), 0 3px 3px rgba(0,0,0, .01);
+  
+  @media (min-width: 426px) and (max-width: 768px) {
+    width: 100%;
+  }
+
+  }
+
+  &:nth-child(5n + 1) {
+    background-image: linear-gradient(to top, #757575 0%, #f0f0f0 50%);
+  }
+
+  &:nth-child(5n + 2) {
+    background-image: linear-gradient(to top, #757575 0%, #f0f0f0 50%);
+  }
+
+  &:nth-child(5n + 3) {
+    background-image: linear-gradient(to top, #757575 0%, #f0f0f0 50%);
+  }
+
+  &:nth-child(5n + 4) {
+    background-image: linear-gradient(to top, #757575 0%, #f0f0f0 50%);
+  }
+
+  &:nth-child(5n + 5) {
+    background-image: linear-gradient(to top, #757575 0%, #f0f0f0 50%);
+  }
+
+  &__image-container {
+    height: 400px;
+    background-color: blue;
+    width: 300px;
+    clip-path: polygon(0 0, 77% 0, 100% 100%, 0% 100%);
+
+    @media (max-width: 425px) {
+      width: 150px;
+      height: 200px;
+
+    }
+  }
+
+  &:hover &__image-container,
+  &:focus &__image-container {
+    clip-path: polygon(0 0, 100% 0, 77% 100%, 0% 100%);;
+  }
+
+  &__image {
+    width: 250px;
+    height: auto;
+    height: 100%;
+    object-fit: cover;
+    transition: .2s;
+
+    @media (min-width: 426px) and (max-width: 768px){
+      max-width: 200px;
+      height: 200px;
+    }
+
+    @media (max-width: 425px) {
+      max-width: 150px;
+    }
+  }
+
+  &:hover &__image,
+  &:focus &__image {
+    transform: scale(1.4) rotate(5deg);
+    transform-origin: center;
+  }
+
+  &__article { 
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 450px;
+    
+  }
+
+  &__content {
+    padding: 1em;
+    width: 60%;
+
+    @media (min-width: 426px) and (max-width: 768px) {
+      width: 450px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: stretch;
+    
+      
+    }
+    @media (max-width: 425px) { 
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+  }
+
+  @media (min-width: 1024px) {
+    & { /* .card */
+      min-width: 240px;
+    }
+  }
+
+  @media (min-width: 426px) and (max-width: 768px) {
+
+  
+    & {
+      min-width: 400px;
+      max-width: 500px;
+      height: 200px;
+    }
+
+    &__container {
+      max-width: 500px;
+      min-width: 400px
+    }
+
+  
+
+    &__article { /* .card__article */
+      display: flex;
+      height: 200px;
+      max-width: 500px;
+      min-width: 400px;
+      justify-content: space-between;
+
+    }
+
+
+  }
+  &__heading { 
+    text-align: center;
+  }
+
+  &__description { 
+    @media (min-width: 426px) and (max-width: 768px) {
+      font-size: .7em;
+      width: 70%;
+      
+    }
+
+    @media (max-width: 425px) {
+      display: none;
+  }
+
+    & &__image-container {
+      height: 100%;
+      width: 50%;
+      clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+    }
+    
+    &:hover &__image-container, /* .card:hover .card__image-container */
+    &:focus &__image-container {
+      width: 50%;
+      clip-path: polygon(0 0, 95% 0, 100% 100%, 0% 100%);
+    }
+  }
+}
