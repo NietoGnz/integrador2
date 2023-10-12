@@ -8,7 +8,6 @@ import ProductoContext from '../contexts/ProductoContext.jsx'
 const Inicio = () => {
   const { productos } = useContext(ProductoContext)
  
-
   return (
   <main>
     <section className="section-cards">
@@ -16,11 +15,9 @@ const Inicio = () => {
         <h1>Todos nuestros productos.</h1>
         <div className='section-cards__p'>
           {
-            productos && productos.length <= 0 ? <p> No se encontraron ningun producto</p> : <p>Se encontraron {productos.length} productos</p>
+            productos  && productos.length <= 0 ? <p> No se encontraron ningun producto</p> : <p>Se encontraron {(productos && productos.length)} productos</p>
           }
         </div>
-
-        
       </header>
 
       <div className="cards-container">
@@ -30,9 +27,9 @@ const Inicio = () => {
           ))
         }
         
-      </div> {/* <!-- .cards-container --> */}
+      </div> 
 
-    </section> {/* <!-- .section-cards --> */}
+    </section> 
   </main> 
   )
 }

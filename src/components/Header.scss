@@ -160,6 +160,7 @@
     text-align: center;
     padding: 1em 1em 0;
     align-self: center;
+    text-decoration: none;
 
   }
 }
@@ -234,12 +235,16 @@
 }
 
 .contador { 
-width: 20px;
-height: 20px; 
+width: 25px;
+height: 25px; 
 clip-path: circle(50% at 50% 50%);
 background-color: white;
 position: relative;
 bottom: 20px;
-z-index: 2;
+z-index: 3;
 right: 5px;
+  p {
+    font-weight: bold;
+    color: #252525;
+  }
 }

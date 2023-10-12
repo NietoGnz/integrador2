@@ -1,10 +1,21 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
 import "./Header.scss";
 import Navbar from "./Navbar";
 import CarritoContext from "../contexts/CarritoContext";
 
 
+
+
 const Header = () => {
+  const { carrito } = useContext(CarritoContext)
+
+  const calcularTotalProductos = () => {
+    let sumaCantidad = carrito.reduce ((totalProductos, prod) => {
+      return totalProductos + prod.cantidad
+    }, 0)
+    return sumaCantidad
+    }
 
 
   return (
@@ -23,7 +34,7 @@ const Header = () => {
         <Link className="search-bar__carrito-container" to="/carrito"><img className="carrito" src="public\img\carrito-de-compras.png" alt="" />
         <div className="contador">
         {
-/*           <p>{totalCarrito}</p> */
+          <p>{parseFloat(calcularTotalProductos())}</p>
         }
         </div></Link>
         <div className="menu-toggle">
