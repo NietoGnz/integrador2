@@ -12,6 +12,7 @@ dist
 temp
 dist-ssr
 *.local
+data/db.json
 
 # Editor directories and files
 

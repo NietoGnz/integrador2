@@ -74,7 +74,7 @@ const Carrito = () => {
           </tr>
         </tbody>
       </table>
-      { !carrito.length <= 0 && <button className="btn btn-success" onClick={handleComprar}>Comprar</button>}
+      { !carrito.length <= 0 && <button className="btn btn-success" id="comprar" onClick={handleComprar}>Comprar</button>}
     </>
   );
 };
