@@ -31,8 +31,8 @@ const Carrito = () => {
 
   return (
     <>
+      <div className="nosotros__split"></div>
       <h1>Listado de productos en el carrito</h1>
-      { !carrito.length <= 0 && <button onClick={handleComprar}>Comprar</button>}
       <table className="tabla-carrito">
         <thead>
           <tr>
@@ -57,9 +57,9 @@ const Carrito = () => {
                   </td>
                   <td>{producto.nombre}</td>
                   <td>{producto.cantidad}</td>
-                  <td>{producto.precio}</td>
+                  <td>{producto.precio*producto.cantidad}</td>
                   <td>
-                    <button onClick={() => handleEliminar(producto.id)}>Eliminar</button>
+                    <button className="btn btn-danger" onClick={() => handleEliminar(producto.id)}>Eliminar</button>
                   </td>
                 </tr>
               ))
@@ -74,6 +74,7 @@ const Carrito = () => {
           </tr>
         </tbody>
       </table>
+      { !carrito.length <= 0 && <button className="btn btn-success" onClick={handleComprar}>Comprar</button>}
     </>
   );
 };

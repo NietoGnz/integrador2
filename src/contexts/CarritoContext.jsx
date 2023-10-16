@@ -28,8 +28,6 @@ const CarritoProvider = ( { children} ) => {
             agregarAlCarrito(producto)
         } else {
            const productoDeCarrito = obtenerProductoDeCarrito(producto)
-           console.log(productoDeCarrito)
-           //eliminarDelCarrito(productoDeCarrito.id)
            productoDeCarrito.cantidad++
            window.localStorage.setItem('carrito', JSON.stringify(carrito))
         }

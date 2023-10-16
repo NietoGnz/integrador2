@@ -1,9 +1,14 @@
 body {
     background-color: #f0f0f0;
-    margin: 0;
+    margin: 0 0 50px;
     padding: 0;
+
+    h1 {
+        padding: 1em 2em;
+        font-weight: bolder
+    }
     @media (max-width: 768px) {
-        min-width: auto;
+        min-width: 100%
     }
 }
 
@@ -21,4 +26,36 @@ table.tabla-carrito {
     th {
         background-color: #f2f2f2;
     }
+
+    thead { 
+        @media (max-width: 768px){
+            display: none
+    }
+    }
+    tbody {
+        tr {
+            
+
+            @media (max-width: 768px){
+                display: flex;
+                flex-direction: column;
+                padding: 1em 2em;
+                flex-wrap: wrap;
+                margin: 1em auto;
+                align-items: stretch;
+                align-content: stretch;
+                border: solid #636363;
+
+                td{
+                    border: none;
+                }
+        }
+    }
+    button {
+        margin: 1em auto;
+    }
+}
+    button {
+    margin: 1em auto;
+}
 }

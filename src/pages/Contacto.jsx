@@ -4,6 +4,7 @@ import './contacto.scss'
 const Contacto = () => {
   return (
     <>
+    <div className="nosotros__split"></div>
     <div className="main-contacto">
       <div className="contacto-header">
         <h1>Bienvenidos a ByteBazaar,</h1>

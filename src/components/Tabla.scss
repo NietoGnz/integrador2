@@ -2,6 +2,9 @@ table.tabla-alta {
     border-collapse: collapse;
     width: 95%;
     margin: 1rem auto;
+    padding: 0 0 50px 0;
+
+
 
     th, td {
         border: 1px solid #ddd;
@@ -12,4 +15,29 @@ table.tabla-alta {
     th {
         background-color: #f2f2f2;
     }
+
+    thead { 
+        @media (max-width: 768px) {
+        display: none;
+        }
+    } 
+    
+    tbody { 
+        @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+
+        tr {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            border: black solid;
+            margin: 0 auto;
+        }
+        
+        }
+            
+     }
 }
+

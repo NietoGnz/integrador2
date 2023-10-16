@@ -88,15 +88,29 @@
   "carrito": [
     [
       {
-        "nombre": "IPhone 12",
-        "foto": "img/apple-iphone-12.jpg",
-        "detalles": "Quasi cupiditate quisquam facere molestiae",
-        "precio": 240.3,
+        "nombre": "IPhone 11 Pro Max",
+        "foto": "img/apple-iphone-11-pro-max.jpg",
+        "detalles": "Lorem ipsum dolor sit, amet consectetur adipisicing.",
+        "precio": 250.5,
         "stock": "4",
         "marca": "Apple",
         "categoria": "celulares",
-        "id": 2,
-        "envio": true,
+        "id": 1,
+        "envio": false,
+        "cantidad": 3
+      }
+    ],
+    [
+      {
+        "nombre": "IPhone 11 Pro Max",
+        "foto": "img/apple-iphone-11-pro-max.jpg",
+        "detalles": "Lorem ipsum dolor sit, amet consectetur adipisicing.",
+        "precio": 250.5,
+        "stock": "4",
+        "marca": "Apple",
+        "categoria": "celulares",
+        "id": 1,
+        "envio": false,
         "cantidad": 3
       }
     ]

@@ -82,8 +82,8 @@ const Formulario = ({ productoAEditar, setProductoAEditar}) => {
           <input type="checkbox" name="envio" id="lbl-envio" checked={form.envio} onChange={handleChange} />
         </div>
 
-        <button type="submit">Guardar</button>
-        <button type="reset" onClick={handleReset}>Limpiar</button>
+        <button type="submit" className="btn btn-success">Guardar</button>
+        <button type="reset" className="btn btn-danger"onClick={handleReset}>Limpiar</button>
       </form>
     </>
   )

@@ -10,6 +10,7 @@ const Inicio = () => {
  
   return (
   <main>
+    <div className="nosotros__split"></div>
     <section className="section-cards">
       <header className="section-cards__header">
         <h1>Todos nuestros productos.</h1>
